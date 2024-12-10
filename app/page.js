@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { Search, RefreshCw, ThermometerSun, Wind, Droplets } from "lucide-react";
+import Link from 'next/link';
 
 export default function WeatherApp() {
   const [weather, setWeather] = useState(null);
@@ -93,10 +94,18 @@ export default function WeatherApp() {
     );
   }
 
-
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-blue-400 to-blue-600 p-4">
       <div className="bg-white rounded-lg shadow-xl p-8 max-w-md w-full">
+        <div className="flex justify-end mb-4">
+          <Link href="/about">
+            <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transform hover:scale-105 transition-duration-300 flex items-center gap-2">
+              About Us
+              <span className="animate-pulse">→</span>
+            </button>
+          </Link>
+        </div>
+
         {error && (
           <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
             {error}
@@ -119,7 +128,6 @@ export default function WeatherApp() {
             <Search size={24} />
           </button>
         </div>
-
 
         {weather && (
           <div className="text-center">
