@@ -19,7 +19,7 @@ export default function About() {
           </h1>
           
           <p className="text-gray-700 mb-8">
-            Greetings, and welcome to Sean Quinn & Yailing Wei's interactive weather app, our job was to design a weather app that would satisfy the learning content from our CPRG306 class at SAIT, ENJOY!!
+            Hello its sean and yailing
           </p>
 
           <Link href="/">
